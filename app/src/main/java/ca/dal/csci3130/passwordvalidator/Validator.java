@@ -11,6 +11,7 @@ public class Validator {
     }
 
     public int passwordValidateQ1(String password) {
+        count = 0;
         //Check if the password is more than size 8
         if(password.length()>8) {
             count ++;
@@ -24,6 +25,8 @@ public class Validator {
     }
     public int passwordValidateQ2(String password) {
 
+        count = 0;
+        //Create patterns with regular expression to match requirements.
         Pattern upperCase = Pattern.compile("[A-Z]");
         Pattern digits = Pattern.compile("[0-9]");
         Pattern specialCharacter = Pattern.compile("[^a-z0-9 ]", Pattern.CASE_INSENSITIVE);
