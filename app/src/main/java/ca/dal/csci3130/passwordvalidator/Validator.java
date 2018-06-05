@@ -4,34 +4,55 @@ import java.util.regex.Pattern;
 
 public class Validator {
 
+    public int count = 0;
+
     public Validator() {
 
     }
 
-    public boolean passwordValidate(String password) {
-
+    public int passwordValidateQ1(String password) {
         //Check if the password is more than size 8
+        if(password.length()>8) {
+            count ++;
+        }
+
+        //Check if the password equals password
+        if(!password.toLowerCase().equals("password") || !password.equals("password")) {
+            count ++;
+        }
+        return count;
+    }
+    public int passwordValidateQ2(String password) {
+
         Pattern upperCase = Pattern.compile("[A-Z]");
         Pattern digits = Pattern.compile("[0-9]");
         Pattern specialCharacter = Pattern.compile("[^a-z0-9 ]", Pattern.CASE_INSENSITIVE);
 
-        if(password.length()<8) {
-            return false;
-        } else if(password.toLowerCase() == "password" || password == "password") {
-            //Check if the password equals password
-            return false;
-        } else if(!digits.matcher(password).find()){
-            //Check if the password has digits
-            return false;
-        } else if(!upperCase.matcher(password).find()) {
-            //Check if the password has UpperCase
-            return false;
-        } else if (!specialCharacter.matcher(password).find()) {
-            //Check if the password has special Character
-            return false;
-        } else {
-            return true;
+        //Check if the password is more than size 8
+        if(password.length()>8) {
+            count ++;
         }
+
+        //Check if the password equals password
+        if(!password.toLowerCase().equals("password") || !password.equals("password")) {
+            count ++;
+        }
+
+        //Check if the password has digits
+        if(digits.matcher(password).find()){
+            count ++;
+        }
+        //Check if the password has UpperCase
+        if(upperCase.matcher(password).find()) {
+            count ++;
+        }
+        //Check if the password has special Character
+        if (specialCharacter.matcher(password).find()) {
+            count ++;
+        }
+
+        return count;
+
     }
 
 }

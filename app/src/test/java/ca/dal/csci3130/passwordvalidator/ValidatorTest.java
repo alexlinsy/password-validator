@@ -11,11 +11,11 @@ public class ValidatorTest {
     public void passwordValidate() {
         //Create a test password
         String passwordStage2 = "Lsy123456.";
-        Boolean output;
+        int output;
 
-        output = isValid.passwordValidate(passwordStage2);
+        output = isValid.passwordValidateQ2(passwordStage2);
         //Test if the string matches requirements
-        assertEquals(true,output);
+        assertEquals(5,output);
 
     }
 }
