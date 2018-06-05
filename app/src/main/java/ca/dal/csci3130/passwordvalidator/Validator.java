@@ -9,6 +9,8 @@ public class Validator {
     }
 
     public int passwordValidateQ1(String password) {
+
+        count = 0;
         //Check if the password is more than size 8
         if(password.length()>8) {
             count ++;
