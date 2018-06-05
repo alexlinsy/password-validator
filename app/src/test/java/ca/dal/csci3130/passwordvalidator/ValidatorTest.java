@@ -10,10 +10,10 @@ public class ValidatorTest {
     @Test
     public void passwordValidate() {
         //Create a test password
-        String password = "lsy12345678";
+        String passwordStage2 = "Lsy123456.";
         Boolean output;
 
-        output = isValid.passwordValidate(password);
+        output = isValid.passwordValidate(passwordStage2);
         //Test if the string matches requirements
         assertEquals(true,output);
 
