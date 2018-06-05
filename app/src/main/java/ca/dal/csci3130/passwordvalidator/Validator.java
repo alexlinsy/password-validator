@@ -24,6 +24,7 @@ public class Validator {
     }
     public int passwordValidateQ2(String password) {
 
+        count = 0;
         Pattern upperCase = Pattern.compile("[A-Z]");
         Pattern digits = Pattern.compile("[0-9]");
         Pattern specialCharacter = Pattern.compile("[^a-z0-9 ]", Pattern.CASE_INSENSITIVE);

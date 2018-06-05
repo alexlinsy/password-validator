@@ -46,10 +46,13 @@ public class MainActivity extends AppCompatActivity {
 
                 if(passwordTest.trim().length() == 0) {
                     alertBox.show();
-                } else if(isValid.passwordValidateQ2(passwordTest) != 5) {
-                    resultTextView.setText("The password is not valid");
-                } else {
-                    resultTextView.setText("The password is valid");
+                }  else {
+
+                    if(isValid.passwordValidateQ2(passwordTest) != 5) {
+                        resultTextView.setText("The password is not valid");
+                    } else {
+                        resultTextView.setText("The password is valid");
+                    }
                 }
 
             }
