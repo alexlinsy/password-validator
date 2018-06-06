@@ -49,9 +49,9 @@ public class MainActivity extends AppCompatActivity {
                 }  else {
 
                     if(isValid.passwordValidateQ2(passwordTest) != 5) {
-                        resultTextView.setText("The password is not valid");
+                        resultTextView.setText("The password is not strong");
                     } else {
-                        resultTextView.setText("The password is valid");
+                        resultTextView.setText("The password is strong");
                     }
                 }
 
